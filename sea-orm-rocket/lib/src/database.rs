@@ -9,12 +9,6 @@ use rocket::{error, info_, Build, Ignite, Phase, Rocket, Sentinel};
 use rocket::figment::providers::Serialized;
 use rocket::yansi::Paint;
 
-#[cfg(feature = "rocket_okapi")]
-use rocket_okapi::{
-    gen::OpenApiGenerator,
-    request::{OpenApiFromRequest, RequestHeaderInput},
-};
-
 use crate::Pool;
 
 /// Derivable trait which ties a database [`Pool`] with a configuration name.
